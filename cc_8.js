@@ -80,3 +80,16 @@ function createCartTracker () { // Write a function that returns another functio
 let cart = createCartTracker();
 console.log(cart(20)); // Expected output: "Total Cart Value: $20"
 console.log(cart(35)); // Expected output: "Total Cart Value: $55"
+
+// TASK 8: RECURSION IN JAVASCRIPT
+
+function calculateSavings(years, amount) { // Write a recursive function that projects savings growth
+    if (years === 0 || years > 10) {
+        return `Projected Savings: $${amount.toFixed(2)}`;
+    }
+    return calculateSavings(years - 1, amount * 1.05);
+}
+
+// Test Cases:
+calculateSavings(8, 1000); // Expected output: "Projected Savings: $1102.50"
+calculateSavings(5, 5000); // Expected output: "Projected Savings: $6381.41"
