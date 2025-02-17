@@ -19,3 +19,20 @@ return `Final Price: $${finalPrice.toFixed(2)}`;
 // Test Cases
 console.log(calculateDiscount(100, 0.2)); // Expected output: "Final Price $80.00"
 console.log(calculateDiscount(250, 0.15)); // Expected output: "Final Price: $212.50"
+
+// TASK 3: ARROW FUNCTION
+
+const calculateServiceFee = (amount, serviceType) => {
+    let fee = 0;
+    if (serviceType === "Premium")
+        fee = amount * 0.15
+    else if (serviceType === "Standard")
+        fee = amount * 0.10
+    else    
+        fee = amount * 0.05
+    return `Service Fee: $${fee.toFixed(2)}`
+}
+
+// Test Cases
+console.log(calculateServiceFee(200, "Premium")); // Expected output: "Service Fee: $30.00"
+console.log(calculateServiceFee(500, "Standard")); // Expected output: "Service Fee: $50.00"
